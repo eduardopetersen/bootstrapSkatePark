@@ -7,6 +7,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -44,7 +45,7 @@
         style="min-height: 60vh; background-image: url(./Rectangle\ 35.png); background-position: center; background-size: cover;">
         <!--VH - Deixar altura minima da img para responsividade - Position vai ajustar imagem ao centro - Cover vai fazer a img toda se ajustar de acordo com o tamanho da tela -  align-items-end- vai colocar texto no bottom da img - py= padding no eixo Y-->
         <div class="container">
-            <h1 class="text-light fw-bold display-3">Escola de Skate</h1>
+            <h1 class="text-light fw-bold display-3 animate__animated">Escola de Skate</h1>
             <!--display-3 vai aumentar a fonte-->
         </div>
     </section>
@@ -70,7 +71,7 @@
     <section style="background-color: rgba(124, 169, 194, 0.25);">
         <div class="container py-5">
             <h2 class="display-6 fw-bold text-center mb-3 cor-texto">Aulas</h2>
-            <div class="row">
+            <div class="row animate__animated">
                 <div class="col-12 col-md-4 mb-3">
                     <div class="card p-2">
                         <!--p = padding-->
@@ -135,18 +136,34 @@
         <h2 class="display-6 fw-bold text-center mb-5">Contato</h2>
         <div class="row">
             <div class="col-5 contato">
-                <form action="">
+                <form action="" class="needs-validation" novalidate> <!--needs-validation vai fazer a tratativa no formulario se o dado enviado tiver algum erro, por exemplo email invalido-->
                     <div class="mb-3">
                         <label for="name" class="form-label cor-cinza fw-bold">Nome</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" required>
+                        <div class="invalid-feedback">
+                            Por favor, digite seu nome.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label cor-cinza fw-bold">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">
+                            Por favor, digite seu email.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label cor-cinza fw-bold">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe seu número.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label cor-cinza fw-bold">Mensagem</label>
-                        <textarea class="form-control" name="" id="message" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="" id="message" cols="30" rows="10" required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor, digite seu mensagem.
+                        </div>
                     </div>
                     <button type="submite" class="btn btn-primary">Enviar Mensagem</button>
                 </form>
@@ -185,6 +202,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+        <script src="./formValidation.js"></script>
+        <script src="./animateOnScroll.js"></script>
 </body>
 
 </html>
