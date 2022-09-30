@@ -1,0 +1,39 @@
+.highlight {
+    color: #00A4FF;
+}
+
+.imagem-posicao {
+    order: 0
+}
+
+@media only screen and (max-width: 991.50px) { /*o texto vai ficar acima da img quando a tela ficar em ate 991px*/
+    .imagem-posicao {
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 991.50px) { 
+    .contato {
+        width: 100%;
+        
+    }
+}
+
+@media only screen and (max-width: 991.50px) { 
+    .endereco {
+        margin-top: 3rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+   
+    }
+}
+
+
+.cor-texto {
+    color: #01304A;
+}
+
+.cor-cinza {
+    color: #8496A0;
+}
